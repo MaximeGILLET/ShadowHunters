@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shadow Hunter.CSharp", "Shadow Hunter.CSharp.csproj", "{C3834288-27D3-6FC6-5A0D-8A61673EB27C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3834288-27D3-6FC6-5A0D-8A61673EB27C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3834288-27D3-6FC6-5A0D-8A61673EB27C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3834288-27D3-6FC6-5A0D-8A61673EB27C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3834288-27D3-6FC6-5A0D-8A61673EB27C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
