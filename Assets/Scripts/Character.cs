@@ -4,7 +4,7 @@ using UnityEngine.Networking;
 
 public class Character :  NetworkBehaviour{
 
-	public string name;
+	public string CharacterName;
 	public string type; //Shadow, hunter or neutral.
 	public string VictoryCondition;
 	public string Description;

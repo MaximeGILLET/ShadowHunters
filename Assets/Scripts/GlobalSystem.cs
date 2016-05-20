@@ -4,12 +4,32 @@ using UnityEngine.Networking;
 
 public class GlobalSystem : NetworkBehaviour {
 
-
+    public string MyUsername;
 	public Character CurrentPlayer;
 	// Use this for initialization
 	NetworkClient myClient;
 
-	public void OnConnected(NetworkMessage netMsg) {
+    public class MyMsgType
+    {
+        public static short Chat = MsgType.Highest + 1;
+    };
+
+    public class ChatMessage : MessageBase
+    {
+        public string username;
+        public string message;
+    }
+
+    public void SendChatMessage(string message)
+    {
+        ChatMessage msg = new ChatMessage();
+        msg.username = MyUsername;
+        msg.message = message;
+
+        NetworkServer.SendToAll(MyMsgType.Chat, msg);
+    }
+
+    public void OnConnected(NetworkMessage netMsg) {
 		Debug.Log("Connected to server");
 	}
 
@@ -31,7 +51,10 @@ public class GlobalSystem : NetworkBehaviour {
 		myClient.RegisterHandler(MsgType.Error, OnError);
 
 		myClient.Connect("127.0.0.1", 8888);
-	}
+
+        SendChatMessage("coucou");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
