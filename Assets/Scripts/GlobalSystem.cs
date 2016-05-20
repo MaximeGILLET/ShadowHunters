@@ -54,6 +54,7 @@ public class GlobalSystem : NetworkBehaviour {
 
         SendChatMessage("coucou");
 
+
     }
 	
 	// Update is called once per frame
